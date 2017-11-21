@@ -4513,10 +4513,10 @@ object {
 .site-banner-media {
 	max-width: 100%;
 }
-.home .site-banner-media,
-.home .site-banner-thumbnail {
+.home .site-banner .site-banner-media,
+.home .site-banner .site-banner-thumbnail {
 	padding: 0;
-	height: 40vw;
+	height: 45vw;
 }
 .site-banner .slick-prev,
 .site-banner .slick-next {
@@ -4527,6 +4527,9 @@ object {
 .home .site-banner .slick-prev,
 .home .site-banner .slick-next {
 	top: 94px;
+}
+.home .site-banner .site-banner-thumbnail {
+	background-size: cover;
 }
 
 .blocker {
@@ -4541,4 +4544,35 @@ object {
 }
 .modal .youtube-player {
 	width: 100% !important;
+}
+
+@media (max-width: 767px) {
+	.entry-content div {
+		width: 100% !important;
+		float: none !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.home .entry-content div + div {
+		font-size: 0.8em;
+	}
+	.home .entry-content div + div img {
+		max-width: 50%;
+		float: none !important;
+		margin: auto !important;
+	}
+	.home .entry-content div + div span {
+		font-size: 1.8rem !important;
+	}
+}
+@media (max-width: 960px) {
+	#masthead {
+		height: auto;
+	}
+}
+@media (max-width: 1600px) {
+	.site-banner-media,
+	.site-banner .site-banner-thumbnail {
+		width: 100%;
+	}
 }
