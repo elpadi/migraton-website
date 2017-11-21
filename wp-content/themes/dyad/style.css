@@ -35,6 +35,7 @@ Tags: blue, yellow, dark, responsive-layout, custom-colors, custom-header, custo
 	## Widgets
 	## Social Media Nav
 # Media Queries
+# Customizations
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -4504,4 +4505,26 @@ object {
 	ol.comment-list ol.children .comment-body {
 		margin-left: 0;
 	}
+}
+
+/*--------------------------------------------------------------
+# Customizations
+--------------------------------------------------------------*/
+.site-banner-media {
+	max-width: 100%;
+}
+.home .site-banner-media,
+.home .site-banner-thumbnail {
+	padding: 0;
+	height: 40vw;
+}
+.site-banner .slick-prev,
+.site-banner .slick-next {
+	margin: auto;
+	bottom: 0;
+	top: 0;
+}
+.home .site-banner .slick-prev,
+.home .site-banner .slick-next {
+	top: 94px;
 }
