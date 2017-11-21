@@ -4528,3 +4528,17 @@ object {
 .home .site-banner .slick-next {
 	top: 94px;
 }
+
+.blocker {
+	z-index: 100;
+}
+.modal {
+	max-width: none;
+}
+.youtube-player {
+	max-width: 80vw;
+	max-height: 80vh;
+}
+.modal .youtube-player {
+	width: 100% !important;
+}

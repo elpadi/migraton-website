@@ -31,10 +31,10 @@
 	<div class="site-banner-header">
 		<span class="banner-featured"><?php esc_html_e( 'Featured', 'dyad' ); ?></span>
 		<h1 class="entry-title">
-			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+			<a href="#banner-content--<?php the_ID(); ?>" rel="modal:open">
 				<?php the_title(); ?>
 			</a>
 		</h1>
-		<?php the_excerpt() ?>
+		<div id="banner-content--<?php the_ID(); ?>" class="modal"><?php the_content() ?></div>
 	</div><!-- .site-banner-header -->
 </article>

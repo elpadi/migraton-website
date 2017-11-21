@@ -223,6 +223,10 @@ add_action( 'after_setup_theme', 'dyad_editor_styles' );
 /**
  * Enqueue scripts and styles.
  */
+add_action( 'wp_enqueue_scripts', function() {
+	wp_register_script( 'modal', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js', array('jquery'), false, true );
+	wp_register_style( 'modal', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css' );
+});
 function dyad_scripts() {
 
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
@@ -243,9 +247,9 @@ function dyad_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_style( 'dyad-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'dyad-style', get_stylesheet_uri(), array( 'modal' ) );
 
-	wp_enqueue_script( 'dyad-global', get_template_directory_uri() . '/js/global.js', array( 'jquery', 'masonry' ), '20151204', true );
+	wp_enqueue_script( 'dyad-global', get_template_directory_uri() . '/js/global.js', array( 'jquery', 'masonry', 'modal' ), '20151204', true );
 }
 add_action( 'wp_enqueue_scripts', 'dyad_scripts' );
 

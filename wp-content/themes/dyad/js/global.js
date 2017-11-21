@@ -142,6 +142,12 @@
 		}
 	}
 
+	function embedSizeFix() {
+		$('.youtube-player').each(function() {
+			this.style.height = Math.round(this.offsetWidth * parseFloat(this.dataset.ratio)) + 'px';
+		});
+	}
+
 	/**
 	 * Firing events
 	 */
@@ -218,8 +224,13 @@
 
 			// Fire Masonry, in case we're moving from mobile to desktop
 			widgetMasonry();
+			embedSizeFix();
 		}, 250 );
 	} );
+
+	$(window).on($.modal.OPEN, function() {
+		embedSizeFix();
+	});
 
 	// if Infinite Scroll, fire again when new posts are loaded
 	$( document.body ).on( 'post-load', function() {
