@@ -1,0 +1,11 @@
+.htaccess
+index.php
+wp-config.php
+
+vendor
+
+wordpress
+wp-content/*
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/dyad
